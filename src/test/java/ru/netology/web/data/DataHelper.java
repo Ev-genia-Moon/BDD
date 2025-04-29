@@ -16,7 +16,7 @@ public class DataHelper {
         return new AuthInfo("vasya", "qwerty123");
     }
 
-    public static CardInfo getFirstCardInfo() {
+     public static CardInfo getFirstCardInfo() {
         return  new CardInfo("5559 0000 0000 0001", "92df3f1c-a033-48e6-8390-206f6b1f56c0");
     }
 
@@ -25,7 +25,7 @@ public class DataHelper {
     }
 
     public static int generateValidAmount(int balance) {
-        return new Random().nextInt(Math.abs(balance)) +1;
+        return new Random().nextInt(Math.abs(balance)) + 1;
     }
     public static int generateInvalidAmount(int balance) {
         return Math.abs(balance) + new Random().nextInt(10000); }
