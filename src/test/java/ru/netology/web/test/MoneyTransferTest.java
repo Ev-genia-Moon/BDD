@@ -29,8 +29,8 @@ public class MoneyTransferTest {
         dashboardPage = verificationPage.validVerify(verificationCode);
         firstCardInfo = getFirstCardInfo();
         secondCardInfo = getSecondCardInfo();
-        firstCardBalance = dashboardPage.!getCardBalance(firstCardInfo);
-        secondCardBalance = dashboardPage.!getCardBalance(secondCardInfo);
+        firstCardBalance = dashboardPage.getCardBalance(firstCardInfo);
+        secondCardBalance = dashboardPage.getCardBalance(secondCardInfo);
     }
 
     @Test
