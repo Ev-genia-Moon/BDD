@@ -10,12 +10,13 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.impl.Html.text;
 
 public class DashboardPage {
-    private final String balanceStart = "баланс: ";
-    private final String balanceFinish = " p. ";
     private final SelenideElement header = $("[data-test-id='dashboard']");
     private final ElementsCollection cards = $$(".list__item div");
+    private final String balanceStart = "баланс: ";
+    private final String balanceFinish = " р.";
 
     public DashboardPage() { header.shouldBe(visible); }
 
@@ -32,7 +33,6 @@ public class DashboardPage {
 
     public int getCardBalance(DataHelper.CardInfo cardInfo) {
        return extractBalance(findCard(cardInfo).getText());
-
     }
 
     public TransferPage selectCardToTransfer(DataHelper.CardInfo cardInfo) {
